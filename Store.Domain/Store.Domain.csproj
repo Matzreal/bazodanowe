@@ -40,15 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="DeliveryType.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="PaymentType.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Model\Client\Address.cs" />
+    <Compile Include="Model\Client\Client.cs" />
+    <Compile Include="Model\Order\DeliveryType.cs" />
+    <Compile Include="Model\Order\Order.cs" />
+    <Compile Include="Model\Order\PaymentType.cs" />
+    <Compile Include="Model\Product\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs" />
-    <Compile Include="StatusType.cs" />
+    <Compile Include="Model\Report\Report.cs" />
+    <Compile Include="Model\Order\StatusType.cs" />
+    <Compile Include="Repositories\IClientRepository.cs" />
+    <Compile Include="Repositories\IOrderRepository.cs" />
+    <Compile Include="Repositories\IProductRepository.cs" />
+    <Compile Include="Repositories\IReportRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Store.Common\Store.Common.csproj">
+      <Project>{a2c2a784-3efd-4d62-907d-d62fac3acf1b}</Project>
+      <Name>Store.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

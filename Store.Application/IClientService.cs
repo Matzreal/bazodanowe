@@ -1,18 +1,9 @@
-﻿using Store.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Store.Common;
+using Store.Domain.Model.Client;
 
 namespace Store.Application
 {
-    public interface IClientService
+    public interface IClientService : IGenericService<Client>
     {
-        IList<Client> GetAllClients();
-
-        void CreateNewClient(Client client);
-        void UpdateClient(Client client);
-        void DeleteClient(Guid client);
     }
 }
