@@ -10,6 +10,11 @@ namespace Store.Application
     {
         private readonly IProductRepository _productRepository;
 
+        public ProductService(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+
         public void Delete(Guid id)
         {
             _productRepository.Delete(id);
@@ -22,9 +27,7 @@ namespace Store.Application
 
         public IList<Product> GetByCategory(string category)
         {
-            return _productRepository.GetAll()
-                .Where(x => x.Category == category)
-                .ToList();
+            return _productRepository.GetByCategory(category).ToList();
         }
 
         public Product GetById(Guid id)

@@ -10,6 +10,11 @@ namespace Store.Application
     {
         private readonly IOrderRepository _orderRepository;
 
+        public OrderService(IOrderRepository orderRepository)
+        {
+            _orderRepository = orderRepository;
+        }
+
         public void Delete(Guid id)
         {
             _orderRepository.Delete(id);
@@ -27,9 +32,7 @@ namespace Store.Application
 
         public IList<Order> GetByStatus(StatusType status)
         {
-            return _orderRepository.GetAll()
-                .Where(x => x.StatusType.Equals(status))
-                .ToList();
+            return _orderRepository.GetByStatus(status).ToList();
         }
 
         public void Insert(Order obj)

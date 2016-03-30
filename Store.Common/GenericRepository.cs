@@ -6,7 +6,7 @@ namespace Store.Common
 {
     public class GenericRepository<T> : IGenericRepository<T>
     {
-        private Dictionary<Guid, T> _dictionary = new Dictionary<Guid, T>();
+        protected Dictionary<Guid, T> _dictionary = new Dictionary<Guid, T>();
 
         public void Delete(Guid id)
         {

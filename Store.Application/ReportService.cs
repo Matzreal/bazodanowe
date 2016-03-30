@@ -10,6 +10,11 @@ namespace Store.Application
     {
         private readonly IReportRepository _reportRepository;
 
+        public ReportService(IReportRepository reportRepository)
+        {
+            _reportRepository = reportRepository;
+        }
+
         public void Delete(Guid id)
         {
             _reportRepository.Delete(id);
