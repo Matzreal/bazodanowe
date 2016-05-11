@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.ObjectMothers", "Stor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Application.UnitTests", "Store.Application.UnitTests\Store.Application.UnitTests.csproj", "{8E6D8FE6-8AEE-4824-9051-DB39D0EBDC85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.ConsoleApplication", "Store.ConsoleApplication\Store.ConsoleApplication.csproj", "{BEDDB864-C8D6-44DE-87C0-833A8EF101DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{8E6D8FE6-8AEE-4824-9051-DB39D0EBDC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E6D8FE6-8AEE-4824-9051-DB39D0EBDC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E6D8FE6-8AEE-4824-9051-DB39D0EBDC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEDDB864-C8D6-44DE-87C0-833A8EF101DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEDDB864-C8D6-44DE-87C0-833A8EF101DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEDDB864-C8D6-44DE-87C0-833A8EF101DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEDDB864-C8D6-44DE-87C0-833A8EF101DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,5 +72,6 @@ Global
 		{3780861B-3246-406B-8B84-084DB79194BF} = {73F30357-7468-494B-82A0-676DA471F4FD}
 		{B9194086-2F2C-44DA-976E-63E4603239F8} = {C39A3106-4E70-4424-813B-0A71ED3AC4B7}
 		{8E6D8FE6-8AEE-4824-9051-DB39D0EBDC85} = {3780861B-3246-406B-8B84-084DB79194BF}
+		{BEDDB864-C8D6-44DE-87C0-833A8EF101DA} = {FC6C0F0F-6C6A-4C9F-85FB-644AFCF0C1EC}
 	EndGlobalSection
 EndGlobal

@@ -2,9 +2,8 @@
 
 namespace Store.Domain.Model.Product
 {
-    public class Product    // Entity
+    public class Product : GuidEntity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
         public double Netto { get; set; }

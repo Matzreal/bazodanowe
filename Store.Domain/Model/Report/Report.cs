@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Store.Domain.Model.Report
 {
-    public class Report // Entity
+    public class Report : GuidEntity
     {
-        public Guid Id { get; set; }
         public List<Order.Order> OrderList { get; set; }
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }

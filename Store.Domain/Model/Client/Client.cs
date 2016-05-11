@@ -2,9 +2,8 @@
 
 namespace Store.Domain.Model.Client
 {
-    public class Client // Entity
+    public class Client : GuidEntity
     {
-        public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Address Address { get; set; }
