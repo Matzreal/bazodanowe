@@ -2,14 +2,16 @@
 {
     public class Address    // Value object
     {
-        public Address(string street, string city, string region, string country, string postalCode)
+        public Address(string Street, string City, string Region, string Country, string PostalCode)
         {
-            Street = street;
-            City = city;
-            Region = region;
-            Country = country;
-            PostalCode = postalCode;
+            this.Street = Street;
+            this.City = City;
+            this.Region = Region;
+            this.Country = Country;
+            this.PostalCode = PostalCode;
         }
+
+        private Address() { }
 
         public string Street { get; private set; }
         public string City { get; private set; }

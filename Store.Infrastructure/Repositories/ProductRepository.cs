@@ -9,10 +9,10 @@ namespace Store.Infrastructure.Repositories
 {
     public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
-        public IEnumerable<Product> GetByCategory(string category)
+        public IEnumerable<Product> GetByCategory(string categorySub)
         {
             return _dictionary.Values
-                .Where(x => x.Category == category);
+                .Where(x => x.Category.Sub == categorySub);
         }
     }
 }

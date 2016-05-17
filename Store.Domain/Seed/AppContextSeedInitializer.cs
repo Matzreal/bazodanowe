@@ -28,15 +28,16 @@ namespace Store.Domain.Seed
             context.SaveChanges();
             #endregion
 
-            #region Product
+            #region Products
             double vat = 0.23;
             double netto = 300.00;
             context.Products.Add(new Product
             {
                 Name = "Okulary przeciwsłoneczne Ray-Ban",
-                Category = "Okulary",
+                Category = new Category("Okulary", "Okulary przeciwsłoneczne"),
                 Netto = netto,
-                Brutto = netto * vat,
+                Vat = vat,
+                Brutto = netto + (netto * vat),
                 Description = "Sample description"
             });
 
@@ -45,7 +46,7 @@ namespace Store.Domain.Seed
 
             #region Orders
             var productList = new List<Product>();
-            productList.Add(context.Products.Single(x => x.Name == "Okulary przeciwsłoneczne Ray-Ban"));
+            productList.Add(context.Products.FirstOrDefault(x => x.Name == "Okulary przeciwsłoneczne Ray-Ban"));
             context.Orders.Add(new Order
             {
                 ProductList = productList,

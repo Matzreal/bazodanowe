@@ -6,6 +6,6 @@ namespace Store.Application
 {
     public interface IProductService : IGenericService<Product>
     {
-        IList<Product> GetByCategory(string category);
+        IList<Product> GetByCategory(string categorySub);
     }
 }

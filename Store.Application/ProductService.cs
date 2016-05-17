@@ -25,9 +25,9 @@ namespace Store.Application
             return _productRepository.GetAll().ToList();
         }
 
-        public IList<Product> GetByCategory(string category)
+        public IList<Product> GetByCategory(string categorySub)
         {
-            return _productRepository.GetByCategory(category).ToList();
+            return _productRepository.GetByCategory(categorySub).ToList();
         }
 
         public Product GetById(Guid id)

@@ -11,16 +11,25 @@ namespace Store.ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var context = new AppContext();
-
-            foreach (var client in context.Clients)
+            using (var context = new AppContext())
             {
-                Console.WriteLine($"{client.Id} : {client.FirstName} : {client.LastName} : {client.Email} :" + 
-                    $"{client.PhoneNumber} : {client.Address}\n");
-            }
+                Console.WriteLine("Hello!");
 
-            context.SaveChanges();
-            context.Dispose();
+                var query = from client in context.Clients
+                            orderby client.FirstName
+                            select client;
+
+                foreach (var client in query)
+                {
+                    Console.WriteLine(client.FirstName + " " + client.LastName);
+                }
+
+                context.SaveChanges();
+                context.Dispose();
+
+                Console.WriteLine("Done!");
+                Console.ReadKey();
+            }
         }
     }
 }

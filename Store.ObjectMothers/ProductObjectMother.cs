@@ -15,7 +15,7 @@ namespace Store.ObjectMothers
             {
                 Id = new Guid(),
                 Name = "productName",
-                Category = "productCategory",
+                Category = new Category("Top category", "Sub category"),
                 Netto = 100.00,
                 Brutto = 123.00,
                 Description = "productDescription"
